@@ -1,0 +1,69 @@
+
+<button class="btn btn-primary" routerLink='/addexercises'>Add Exercise</button>
+
+&nbsp;&nbsp;<button class="btn btn-primary" (click)="fetchExercises()">Display Exercise</button>
+
+<div *ngIf="displaying">
+<div class="row">
+
+
+    <!-- <div class="column">
+
+      <div class="card">..</div>
+    </div> -->
+
+
+     <!-- <div class="column">
+
+      <div class="card">
+        <img src="http://healthnfitnessclub.com/wp-content/uploads/2018/12/barbell-curl-z.jpg">
+        <h3>Bicep Curl</h3>
+      </div>
+    </div> 
+     -->
+    
+
+    <!-- <div *ngFor="let ex of exArray">
+        <div class="column">
+      <div class="card">
+          <img src="http://healthnfitnessclub.com/wp-content/uploads/2018/12/barbell-curl-z.jpg">
+          <h3>{{ex?.name}}</h3>
+      </div>
+      </div>
+    </div>
+     -->
+
+     <!-- <div *ngFor="let ex of exArray">
+        <img src={{ex.imageUrl}}>
+        <h3>{{ex?.name}}</h3>
+     </div> -->
+
+
+     <div *ngFor="let ex of exArray">
+      
+     <div class="card">
+        <img src={{ex.imageUrl}} alt="Avatar">
+        <div class="container">
+          <h4><b>{{ex?.name}}</b></h4> 
+          <p>{{ex?.description}}</p> 
+        </div>
+      
+    </div>
+    </div>
+
+
+
+
+    <!-- <div class="column">
+      <div class="card">..</div>
+    </div>
+    <div class="column">
+      <div class="card">..</div>
+    </div> -->
+  </div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>
